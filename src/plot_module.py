@@ -8,6 +8,6 @@ class plt_plot():
         datos=data[(data.nombre_departamento==departamento)&
             (data.nombre_municipio==ciudad)&
             (data.nombre_de_la_clase.isin(["AUTOMOVIL","CAMPERO"]))]
-        datos=datos.groupby("fecha_registro")["cantidad"].sum().reset_index()
-        plt.plot(datos["fecha_registro"],datos["cantidad"])
+        datos=datos.groupby("fecha_de_registro")["cantidad"].sum().reset_index()
+        plt.plot(datos["fecha_de_registro"],datos["cantidad"])
         plt.show()

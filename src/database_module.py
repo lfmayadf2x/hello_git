@@ -7,7 +7,7 @@ class DataBase:
     def __init__(self):
         self.url = "https://www.datos.gov.co/resource/u3vn-bdcy.json"
     # Function get
-    def get_date(self,n_data):
+    def get_data(self,n_data):
         request_url=self.url+f"?$limit={n_data}"
         response=requests.get(request_url)
         if response.status_code == 200:
